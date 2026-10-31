@@ -1,0 +1,52 @@
+{
+  "manifest_version": 2,
+  "name": "Fast Folder Jump",
+  "version": "0.1.5",
+  "description": "Instant Move, Copy and Jump-to folder search for Local Folders, with exclusions, recent folders and keyboard shortcuts.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "gawkla.fast-folder-jump@addons.thunderbird.net",
+      "strict_min_version": "140.0",
+      "strict_max_version": "153.*"
+    }
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "permissions": [
+    "accountsRead",
+    "messagesRead",
+    "messagesMove",
+    "storage"
+  ],
+  "browser_action": {
+    "default_title": "Fast Folder Jump — Settings",
+    "default_icon": "icons/folder.svg",
+    "default_popup": "toolbar.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "64": "icons/folder.svg"
+  },
+  "experiment_apis": {
+    "fastJump": {
+      "schema": "api/schema.json",
+      "parent": {
+        "scopes": [
+          "addon_parent"
+        ],
+        "paths": [
+          [
+            "fastJump"
+          ]
+        ],
+        "script": "api/implementation.js"
+      }
+    }
+  }
+}

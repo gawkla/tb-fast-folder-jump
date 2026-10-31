@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Fast Folder Jump — Settings</title><link rel="stylesheet" href="ui.css"></head>
+<body><main>
+  <header><div><h1>⚡ Fast Folder Jump</h1><p>Instant folder navigation for Local Folders only · Shift+M / Shift+C / Shift+G</p></div><span class="version">0.1.5</span></header>
+  <section class="panel"><h2>Search behavior</h2>
+    <div class="formrow"><label for="listLength">Visible results</label><div><input id="listLength" type="number" min="4" max="30" step="1" value="12"><small>4–30 visible rows per search</small></div></div>
+    <div class="row"><button id="save" class="primary">Save settings</button><button id="refresh">Refresh folder index</button><span id="status" role="status"></span></div>
+  </section>
+  <section class="panel"><h2>Exclude folders from search</h2>
+    <p class="help">Excluded folders are hidden from Move, Copy and Jump search. Type <code>!</code> at the end of your search to temporarily ignore exclusions. Example: <code>archive!</code>.</p>
+    <div class="row"><input id="find" type="search" placeholder="Find a local folder to exclude…" autocomplete="off"><span id="count"></span></div>
+    <div class="choices" id="choices"></div>
+    <h3>Current exclusions</h3>
+    <div id="excluded" class="excluded"></div>
+  </section>
+  <section class="panel"><h2>Keyboard shortcuts</h2>
+    <p><kbd>Shift</kbd> + <kbd>M</kbd> → Move selected messages; <kbd>Shift</kbd> + <kbd>C</kbd> → Copy; <kbd>Shift</kbd> + <kbd>G</kbd> → Jump to a folder.</p>
+    <p><kbd>↑</kbd> / <kbd>↓</kbd> → navigate results; <kbd>Enter</kbd> → confirm; <kbd>Ctrl</kbd> + <kbd>Enter</kbd> → move/copy then open destination; <kbd>Esc</kbd> → close.</p>
+    <p class="warning">Thunderbird already uses Shift+C for “Mark all as read”. When this extension is active in the message list, it intercepts that shortcut. Another extension (for example Nostalgy++) could also intercept these keys: disable conflicting shortcuts there.</p>
+  </section>
+  
+  <section class="panel ffj-support" aria-label="Support development">
+    <h2>☕ Support Fast Folder Jump</h2>
+    <p>If Fast Folder Jump saves you time, you can support its development with a coffee. Donations are entirely optional; all features are free.</p>
+    <a class="ffj-coffee-link" href="https://ko-fi.com/gawkla" target="_blank" rel="noopener noreferrer">☕ Buy me a coffee</a>
+  </section>
+
+  <footer>Local Folders only. All settings are stored locally. No automatic network requests or telemetry.</footer>
+</main><script src="options.js"></script></body></html>

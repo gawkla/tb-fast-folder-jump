@@ -1,0 +1,18 @@
+[
+  {
+    "namespace": "fastJump",
+    "functions": [
+      {"name": "start", "type": "function", "async": true, "parameters": []},
+      {"name": "setData", "type": "function", "async": true, "parameters": [
+        {"name": "state", "type": "any"}
+      ]},
+      {"name": "diagnose", "type": "function", "async": true, "parameters": []},
+      {"name": "showError", "type": "function", "async": true, "parameters": [ {"name":"message", "type":"string"} ]}
+    ],
+    "events": [
+      {"name": "onAction", "type": "function", "parameters": [
+        {"name": "action", "type": "any"}
+      ]}
+    ]
+  }
+]
