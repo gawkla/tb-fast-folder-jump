@@ -35,6 +35,25 @@ Instead of loading a new search window or scanning the folder tree every time yo
 
 The GitHub/ATN build uses extension ID `gawkla.fast-folder-jump@addons.thunderbird.net`. It is **not** an in-place upgrade of the older local test build with ID `fast-folder-jump@local`; those builds use separate extension storage. Back up any exclusions/recent destinations before switching.
 
+
+## Screenshots
+
+### Instant folder search
+
+Fast, keyboard-driven Move, Copy and Jump-to-folder
+with one-click folder exclusions.
+
+![Fast Folder Jump search panel](screenshots/2026-10-31_00-38-52.png)
+
+### Settings and folder exclusions
+
+Configure the number of visible results and exclude
+individual folders or entire folder trees.
+
+![Settings and folder exclusions](screenshots/2026-10-31_00-40-07.png)
+
+
+
 ## Build and tests
 
 No compilation or third-party JavaScript dependencies are required. The add-on's `manifest.json` and source files live in the repository root.
